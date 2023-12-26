@@ -22,6 +22,8 @@
 #define TAM 30
 #define INFINITO 9999.99
 
+// mal role
+
 struct Cidade {
     char nome[TAM];
     float distancia;
