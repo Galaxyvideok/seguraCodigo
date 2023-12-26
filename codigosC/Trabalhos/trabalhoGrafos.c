@@ -21,6 +21,7 @@
 #define MAX 13
 #define TAM 30
 #define INFINITO 9999.99
+
 struct Cidade {
     char nome[TAM];
     float distancia;
