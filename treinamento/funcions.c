@@ -60,4 +60,74 @@ int main(){
     }
 }
 
+/*Escreva um programa que contenha duas variaveis inteiras. Leia essas vari ´ aveis do ´
+teclado. Em seguida, compare seus enderec¸os e exiba o conteudo do maior enderec¸o.*/
+
+int pedirNum(int desci){
+    int num;
+    if (desci == 0){
+        printf("Digite o numero 1:");
+        scanf("%d", &num);
+    }else{
+        printf("Digite o numero 2:");
+        scanf("%d", &num);
+    }
+    return num;
+}
+
+int main(){
+    int num1 = pedirNum(0);
+    int num2 = pedirNum(1);
+    if (&num1 > &num2){
+        printf("\n\n%s\n\n", FINAL);
+        printf("Endereço 1: %p\n", &num1);
+        printf("Endereço 2: %p\n", &num2);
+        printf("O endereço do primeiro inteiro e maior!!!\n");
+        printf("\n\n%s\n\n", CORTE);
+    }else{
+        printf("\n\n%s\n\n", FINAL);
+        printf("Endereço 1: %p\n", &num1);
+        printf("Endereço 2: %p\n", &num2);
+        printf("O endereço do segundo inteiro e maior!!!\n");
+        printf("\n\n%s\n\n", CORTE);
+    }
+}
+
+/*Fac¸a um programa que leia 2 valores inteiros e chame uma func¸ao que receba estas ˜
+2 variaveis e troque o seu conte ´ udo, ou seja, esta func¸ ´ ao˜ e chamada passando duas ´
+variaveis A e B por exemplo e, ap ´ os a execuc¸ ´ ao da func¸ ˜ ao, A conter ˜ a o valor de B e B ´
+tera o valor de A.*/
+
+int pedirNum(int desci){
+    int num;
+    if (desci == 0){
+        printf("Digite o numero A:");
+        scanf("%d", &num);
+    }else{
+        printf("Digite o numero B:");
+        scanf("%d", &num);
+    }
+    return num;
+}
+
+void trocar(int *a, int *b){
+    int aux = *a;
+    *a = *b;
+    *b = aux;
+}
+
+int main(){
+    printf("\n\n%s\n\n", INICIO);
+    int a = pedirNum(0);
+    int b = pedirNum(1);
+    trocar(&a,&b);
+    printf("\n\n%s\n\n", FINAL);
+    printf("Valor de A: %d\n", a);
+    printf("Valor de B: %d\n", b);
+    printf("\n\n%s\n\n", CORTE);
+    return 0;
+}
+
+
+
 
