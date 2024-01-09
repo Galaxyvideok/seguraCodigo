@@ -38,3 +38,26 @@ int main(){
     printf("\n\n%s\n\n", FINAL);
     imprimir(pontNum,pontNumReal,pontChar);
 }
+
+/*Escreva um programa que contenha duas variaveis inteiras. Compare seus enderec¸os e ´
+exiba o maior enderec¸o.*/
+
+int main(){
+    int num1 = 12;
+    int num2 = 9;
+    if (&num1 > &num2){
+        printf("\n\n%s\n\n", FINAL);
+        printf("Endereço 1: %p\n", &num1);
+        printf("Endereço 2: %p\n", &num2);
+        printf("O endereço do primeiro inteiro e maior!!!\n");
+        printf("\n\n%s\n\n", CORTE);
+    }else{
+        printf("\n\n%s\n\n", FINAL);
+        printf("Endereço 1: %d\n", &num1);
+        printf("Endereço 2: %d\n", &num2);
+        printf("O endereço do segundo inteiro e maior!!!\n");
+        printf("\n\n%s\n\n", CORTE);
+    }
+}
+
+
